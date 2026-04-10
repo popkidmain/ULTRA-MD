@@ -1,0 +1,4 @@
+build:
+  docker: {}
+run:
+  worker: node index.js
