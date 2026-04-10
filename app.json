@@ -14,7 +14,7 @@
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "eco"
+      "size": "basic"
     }
   },
   "env": {
@@ -92,7 +92,7 @@
       "required": false
     },
     "RENDER_EXTERNAL_URL": {
-      "description": "Your Heroku app URL to keep bot alive. Example: https://your-app.herokuapp.com",
+      "description": "Your Heroku app URL. Example: https://your-app.herokuapp.com",
       "required": false
     }
   }
