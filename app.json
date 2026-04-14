@@ -1,0 +1,95 @@
+{
+  "name": "ULTRA-MD",
+  "description": "WhatsApp bot made by Popkid from Kenya",
+  "logo": "https://files.catbox.moe/kiy0hl.jpg",
+  "keywords": ["ULTRA-MD", "whatsapp-bot", "baileys", "popkid"],
+  "success_url": "/",
+  "stack": "heroku-24",
+  "env": {
+    "SESSION_ID": {
+      "description": "Put your POPKID;;; session ID here.",
+      "required": true
+    },  
+    "PREFIX": {
+      "description": "The bot command prefix (e.g. . or !)",
+      "required": false,
+      "value": "."
+    },
+    "NON_PREFIX": {
+      "description": "Set to true to allow commands without a prefix.",
+      "required": false,
+      "value": "false"
+    },
+    "OWNER_NAME": {
+      "description": "The name of the bot owner.",
+      "required": false,
+      "value": "POPKID"
+    }, 
+    "OWNER_NUMBER": {
+      "description": "The WhatsApp number of the owner (e.g., 254732297194).",
+      "required": false,
+      "value": "254732297194"
+    }, 
+    "ALWAYS_ONLINE": {
+      "description": "Set to true to show the bot as always online.",
+      "required": false,
+      "value": "true"  
+    },    
+    "AUTO_READ_STATUS": {
+      "description": "Enable automatic viewing of statuses.",
+      "required": false,
+      "value": "true"
+    }, 
+    "AUTO_REACT_STATUS": {
+      "description": "Enable automatic reactions to statuses.",
+      "required": false,
+      "value": "true"
+    }, 
+    "AUTO_TYPING": {
+      "description": "Show 'typing...' status when receiving messages.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_RECORDING": {
+      "description": "Show 'recording...' status when receiving messages.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_READ": {
+      "description": "Automatically mark incoming messages as read.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_REACT": {
+      "description": "Bot reacts to every incoming message.",
+      "required": false,
+      "value": "false"
+    },
+    "AUTO_BIO": {
+      "description": "Automatically update the bot's bio with live time.",
+      "required": false,
+      "value": "true"
+    },
+    "BOT_OFF": {
+      "description": "Set to true to disable the bot for everyone except the owner.",
+      "required": false,
+      "value": "false"
+    },
+    "NEWSLETTER_ID": {
+      "description": "JID for the newsletter attribution.",
+      "required": false,
+      "value": "120363423997837331@newsletter"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
